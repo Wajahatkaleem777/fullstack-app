@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Node.js &middot; Express &middot; PostgreSQL</p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <input
+        type="text"
+        id="title"
+        placeholder="Task title"
+        required
+        maxlength="255"
+      />
+      <input
+        type="text"
+        id="description"
+        placeholder="Description (optional)"
+      />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="error" class="error hidden"></div>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <p id="empty-state" class="empty-state hidden">No tasks yet. Add one above.</p>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
